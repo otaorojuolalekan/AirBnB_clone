@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-
-""" AirBnB Console """
+"""
+The AirBnB Console:
+Terminal where Classes can be created, updated, destroyed 
+"""
 
 import cmd
 import sys
@@ -17,18 +19,18 @@ from models.user import User
 class HBNBCommand(cmd.Cmd):
     """ Class HBNB to read command """
     prompt = '(hbnb) '
-    __all_117 = 0
+    __chk_117 = 0
 
     def emptyline(self):
-        """Pass if no command is given"""
+        """This ensures emptyline does nothing"""
         pass
 
     def precmd(self, line):
-        """ Edit given command to allow second type of input"""
+        """Edit given command to allow secondary type of input"""
         if not sys.stdin.isatty():
             print()
         if '.' in line:
-            HBNBCommand.__all_117 = 1
+            HBNBCommand.__chk_117 = 1
             line = line.replace('.', ' ').replace('(', ' ').replace(')', ' ')
             cmd_argv = line.split()
             cmd_argv[0], cmd_argv[1] = cmd_argv[1], cmd_argv[0]
@@ -36,16 +38,16 @@ class HBNBCommand(cmd.Cmd):
         return super().precmd(line)
 
     def do_quit(self, arg):
-        'Quit command to exit the program'
+        """Quit command to exit the program"""
         return True
 
     def do_EOF(self, arg):
-        'EOF command to exit the program'
+        """EOF command to exit the program"""
         print()
         return True
 
     def do_create(self, arg):
-        "Create an instance if the Model exists"
+        """Create an instance if the Model exists"""
         if not arg:
             print("** class name missing **")
             return None
@@ -57,7 +59,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, arg):
-        "Print dict of an instance in base of its ID"
+        """Print dictionary repr of an instance in base of its ID"""
         cmd_argv = arg.split()
         if not cmd_argv:
             print("** class name missing **")
@@ -97,14 +99,14 @@ class HBNBCommand(cmd.Cmd):
         len_objs = len(all_objs)
         for key, value in all_objs.items():
             if not cmd_argv:
-                if HBNBCommand.__all_117 == 0:
+                if HBNBCommand.__chk_117 == 0:
                     print_list.append("\"" + str(value) + "\"")
                 else:
                     print_list.append(str(value))
             else:
                 check = key.split('.')
                 if cmd_argv[0] == check[0]:
-                    if HBNBCommand.__all_117 == 0:
+                    if HBNBCommand.__chk_117 == 0:
                         print_list.append("\"" + str(value) + "\"")
                     else:
                         print_list.append(str(value))
@@ -113,8 +115,10 @@ class HBNBCommand(cmd.Cmd):
         print("]")
 
     def do_destroy(self, arg):
-        "Deletes an instance based on it's ID and save the changes\n \
-        Usage: destroy <class name> <id>"
+        """
+        Deletes an instance based on it's ID and save the changes
+            Usage: destroy <class name> <id>
+        """
 
         cmd_argv = arg.split()
         if not cmd_argv:
@@ -142,7 +146,10 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_update(self, arg):
-        "Usage: update <class name> <id> <attribute name> <attribute value>"
+        """
+        
+        Usage: update <class name> <id> <attribute name> <attribute value>
+        """
         cmd_argv = []
         part2_argv = []
         is_dict = 0
