@@ -116,10 +116,8 @@ class HBNBCommand(cmd.Cmd):
         print("]")
 
     def do_destroy(self, arg):
-        """
-        Deletes an instance based on it's ID and save the changes
-            Usage: destroy <class name> <id>
-        """
+        """Deletes an instance based on it's ID and save the changes
+            Usage: destroy <class name> <id>"""
 
         cmd_argv = arg.split()
         if not cmd_argv:
@@ -147,9 +145,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_update(self, arg):
-        """
-        Usage: update <class name> <id> <attribute name> <attribute value>
-        """
+        """Usage: update <class name> <id> <attribute name> <attribute value>"""
         cmd_argv = []
         part2_argv = []
         is_dict = 0

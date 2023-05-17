@@ -86,7 +86,7 @@ class Test_help(unittest.TestCase):
 
     def test_help_show(self):
         """  Test for help of show command """
-        msg = "Print dict of a instance in base of it's ID\n"
+        msg = "Print dictionary repr of an instance in base of its ID\n"
         with patch('sys.stdout', new=io.StringIO()) as f:
             HBNBCommand().onecmd("help show")
             st = f.getvalue()
