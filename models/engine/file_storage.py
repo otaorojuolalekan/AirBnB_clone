@@ -26,6 +26,7 @@ class FileStorage:
         obj_id = obj.__class__.__name__ + '.' + obj.id
         FileStorage.__objects[obj_id] = obj
 
+    # create the save method
     def save(self):
         """ serializes __objects to the JSON file (path: __file_path) """
         jdic = {}
