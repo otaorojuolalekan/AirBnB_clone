@@ -42,7 +42,8 @@ class BaseModel:
     def __str__(self):
         """ Defines what should be printed for each instance of the class """
         st = "[{:s}] ({:s}) {:s}"
-        st = st.format(self.__class__.__name__, self.id, str(self.__dict__))
+        args = [self.__class__.__name__, self.id, str(self.__dict__)]
+        st = st.format(*args)
         return st
 
     def save(self):
