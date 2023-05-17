@@ -11,9 +11,11 @@ class FileStorage:
 
     """ Class that stores and loads instances to/from files in JSON format """
 
+    # create 2
     __file_path = "file.json"
     __objects = {}
 
+    # create the all method
     def all(self):
         """ Returns the dictionary __objects """
         return FileStorage.__objects
