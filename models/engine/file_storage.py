@@ -18,6 +18,7 @@ class FileStorage:
         """ Returns the dictionary __objects """
         return FileStorage.__objects
 
+    # create the new method
     def new(self, obj):
         """ Sets in __objects the obj key <obj class name>.id """
         obj_id = obj.__class__.__name__ + '.' + obj.id

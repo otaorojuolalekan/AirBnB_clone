@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 The AirBnB Console:
-Terminal where Classes can be created, updated, destroyed 
+Terminal where Classes can be created, updated, destroyed
+and viewed
 """
 
 import cmd
@@ -147,7 +148,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, arg):
         """
-        
         Usage: update <class name> <id> <attribute name> <attribute value>
         """
         cmd_argv = []
