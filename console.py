@@ -145,7 +145,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_update(self, arg):
-        """Usage: update <class name> <id> <attribute name> <attribute value>"""
+        """Usage:update <class name> <id> <attribute name> <attribute value>"""
         cmd_argv = []
         part2_argv = []
         is_dict = 0

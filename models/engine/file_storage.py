@@ -36,7 +36,7 @@ class FileStorage:
         with open(self.__file_path, "w", encoding="utf-8") as myfile:
             json.dump(jdic, myfile)
 
-    # create the reload 
+    # create the reload
     def reload(self):
         """
         deserializes the JSON file to __objects (only if the JSON file

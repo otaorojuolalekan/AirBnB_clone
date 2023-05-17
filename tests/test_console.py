@@ -112,7 +112,7 @@ class Test_help(unittest.TestCase):
 
     def test_help_update(self):
         """  Test for help of update command """
-        msg = "Usage: update <class name> <id> <attribute name> " \
+        msg = "Usage:update <class name> <id> <attribute name> " \
               "<attribute value>\n"
         with patch('sys.stdout', new=io.StringIO()) as f:
             HBNBCommand().onecmd("help update")
