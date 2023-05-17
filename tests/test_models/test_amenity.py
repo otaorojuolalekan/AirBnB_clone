@@ -87,8 +87,10 @@ class Test_initAmenity(unittest.TestCase):
         try:
             remove("file.json")
         except Exception:
-            test_instance_creation_no_arg(self):
-                """ No arguments """
+            pass
+
+    def test_instance_creation_no_arg(self):
+        """ No arguments """
         b1 = Amenity()
         self.assertTrue(hasattr(b1, "id"))
         self.assertTrue(hasattr(b1, "created_at"))
