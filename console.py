@@ -117,7 +117,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, arg):
         """Deletes an instance based on it's ID and save the changes
-            Usage: destroy <class name> <id>"""
+         Usage: destroy <class name> <id>"""
 
         cmd_argv = arg.split()
         if not cmd_argv:
