@@ -11,7 +11,7 @@ class FileStorage:
 
     """ Class that stores and loads instances to/from files in JSON format """
 
-    # create 2
+    # create 2 private class attributes
     __file_path = "file.json"
     __objects = {}
 
