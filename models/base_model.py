@@ -15,6 +15,7 @@ class BaseModel:
 
     """ BaseModel Class definition """
 
+    # initialize BM
     def __init__(self, *args, **kwargs):
         """ Constructor """
 
@@ -39,6 +40,7 @@ class BaseModel:
         if len(kwargs) == 0:
             storage.new(self)
 
+    # Create str repr of BM
     def __str__(self):
         """ Defines what should be printed for each instance of the class """
         st = "[{:s}] ({:s}) {:s}"
@@ -46,6 +48,7 @@ class BaseModel:
         st = st.format(*args)
         return st
 
+    # create save method of BM
     def save(self):
         """
         Update the Public Instance Attr updated_at with the current datetime
@@ -53,6 +56,7 @@ class BaseModel:
         self.updated_at = datetime.now()
         storage.save()
 
+    # Create dict repr of BM
     def to_dict(self):
         """
         returns a dictionary containing all keys/values of __dict__
