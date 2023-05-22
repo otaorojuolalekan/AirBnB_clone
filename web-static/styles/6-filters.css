@@ -66,7 +66,10 @@ button:hover {
     padding-top: 10px;
     padding-bottom: 20px;
     z-index: 1;
+}
 
+.popover h2 {
+    margin: 0;
 }
 
 li {
